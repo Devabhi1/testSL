@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the Webapp with Maven'
+                build 'BookzyBuildJob'
+            } 
+    
+        }
+    stages {
+        stage('Test') {
+            steps {
+                echo 'Testing the webapp with junit'
+                build 'BookzyTestJob'
+            }
+        }
+    stages {
+        stage('Deploy') {
+            steps {
+                echo 'Deploy the app with on AWS Instance '
+                build 'BookzyDeployJob'
+            }
+        }        
+    }
