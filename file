@@ -1,57 +1,27 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building the Webapp with Maven'
-                build 'BookzyBuildJob'
-            } 
-    
-        }
-    stages {
-        stage('Test') {
-            steps {
-                echo 'Testing the webapp with junit'
-                build 'BookzyTestJob'
-            }
-        }
-    stages {
-        stage('Deploy') {
-            steps {
-                echo 'Deploy the app with on AWS Instance '
-                build 'BookzyDeployJob'
-            }
-        }        
-    }
-
-ec2-52-24-180-222.us-west-2.compute.amazonaws.com
-
-
-
-
-
-
-
 -----BEGIN RSA PRIVATE KEY-----
-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
+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
 -----END RSA PRIVATE KEY-----
