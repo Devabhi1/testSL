@@ -23,3 +23,5 @@ pipeline {
             }
         }        
     }
+
+ec2-52-24-180-222.us-west-2.compute.amazonaws.com
